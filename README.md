@@ -8,7 +8,6 @@ A Rust plugin-based app that renders text, where the plugins are wasm modules.
 
 - The renderer API is defined by `renderer.wit`. 
 - The app will search for plugins in the `plugins` directory.
-- 
 
 # Building
 
