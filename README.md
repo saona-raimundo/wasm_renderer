@@ -1,3 +1,8 @@
+An application that renders text:
+- written in Rust
+- plugin-based design
+- plugins are wasm modules
+
 Based on [wasmlink demo](https://github.com/bytecodealliance/wit-bindgen/tree/main/crates/wasmlink/demo) of the [wit-bindgen project](https://github.com/bytecodealliance/wit-bindgen).
 
 # Goal
