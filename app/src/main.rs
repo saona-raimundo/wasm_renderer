@@ -43,12 +43,10 @@ fn setup() -> anyhow::Result<(
     // But we also have to pass the wasi context just created.
     let mut store = Store::new(&engine, (wasi, renderer::RendererData {}));
 
-    let (plugin, _instance) = renderer::Renderer::instantiate(
-        &mut store,
-        &module,
-        &mut linker,
-        |(_wasi, plugin_data)| plugin_data,
-    )?;
+    let (plugin, _instance) =
+        Renderer::instantiate(&mut store, &module, &mut linker, |(_wasi, plugin_data)| {
+            plugin_data
+        })?;
 
     Ok((store, plugin))
 }
